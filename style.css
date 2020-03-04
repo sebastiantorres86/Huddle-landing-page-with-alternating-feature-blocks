@@ -1,8 +1,8 @@
-/*----------------------------------------------------------------------------- 
-Huddle Screen Stylesheet 
+/*-----------------------------------------------------------------------------
+Huddle Screen Stylesheet
 
-version:   1.0 
-date:      02/03/20 
+version:   1.0
+date:      02/03/20
 author:    Sebastian Torres
 email:     seba.torres.dev@gmail.com */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:600&display=swap");
@@ -23,12 +23,12 @@ email:     seba.torres.dev@gmail.com */
 
 body {
   font: 62.5%/1.5 "Open Sans", sans-serif;
-  color: #000000;
+  color: var(--Very-Dark-Cyan);
   text-align: center;
   background-color: ghostwhite;
 }
 
-.hero {
+#hero {
   background: url(/images/bg-hero-mobile.svg);
   color: var(--Very-Dark-Cyan);
   background-color: var(--Very-Pale-Cyan);
@@ -49,7 +49,6 @@ p {
   font-family: "Open Sans";
   font-weight: 400;
   font-size: 1.8em;
-  padding: 1em 0;
 }
 
 .p-card {
@@ -91,7 +90,7 @@ img.logo {
 a.button {
   display: inline-block;
   padding: 0.6em 2em;
-  margin: 2em 1em;
+  margin: 2em 0;
   border-radius: 2em;
   box-sizing: border-box;
   text-decoration: none;
@@ -100,7 +99,6 @@ a.button {
   background-color: #fff;
   text-align: center;
   font-size: 1.2em;
-  transition: all 0.2s;
   box-shadow: 0 6.3px 10px rgba(0, 0, 0, 0.07), 0 50px 80px rgba(0, 0, 0, 0.035);
 }
 
@@ -124,7 +122,6 @@ a.button.cta {
   background-color: #fff;
   text-align: center;
   font-size: 1.2em;
-  transition: all 0.2s;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.07),
     0 6.7px 5.3px rgba(0, 0, 0, 0.05), 0 12.5px 10px rgba(0, 0, 0, 0.042);
 }
@@ -141,45 +138,41 @@ a.button.cta {
   color: var(--Very-Dark-Cyan);
   background-color: #fff;
   text-align: center;
-  transition: all 0.2s;
   box-shadow: 0 6.3px 10px rgba(0, 0, 0, 0.07), 0 50px 80px rgba(0, 0, 0, 0.035);
 }
 
 footer {
   background-color: var(--Very-Dark-Cyan);
   color: #fff;
-  padding: 10em 2em 0 2em;
+  padding: 12em 2em 6em 2em;
   text-align: left;
 }
 
 .logo-footer {
-  fill: #fff;
   width: 50%;
   height: auto;
 }
 
-#contact {
+.contact {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
-  /* height: auto; */
 }
 
 img.icon-location {
-  width: 10vw;
+  width: 10%;
   height: auto;
   margin-right: 2.5em;
-  align-self: baseline;
+  align-self: flex-start;
 }
 
 .icon-phone {
-  width: 5vw;
+  width: 6%;
   height: auto;
   margin-right: 2em;
 }
 
 .icon-mail {
-  width: 5vw;
+  width: 6%;
   height: auto;
   margin-right: 2em;
 }
@@ -188,15 +181,17 @@ nav > p {
   margin: 0;
   padding-top: 0.5em;
 }
+
 .social {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 3em;
+  margin: 6em 0 3em 0;
 }
+
 i.fab {
   padding: 8px;
-  font-size: 0.9em;
+  font-size: 1.8em;
   width: 0.9em;
   text-align: center;
   text-decoration: none;
@@ -213,5 +208,114 @@ li {
 
 .copy {
   text-align: center;
-  font-size: 1em;
+  font-size: 1.2em;
+}
+
+/* Desktop Version */
+@media (min-width: 768px) and (max-width: 1440px) {
+  #hero {
+    background: url(/images/bg-hero-desktop.svg);
+    height: 100vh;
+    padding-bottom: 5em;
+  }
+
+  #header {
+    padding: 1.5em 5em;
+  }
+
+  a.button {
+    font-size: 1.8em;
+    padding: 0.6em 3em;
+  }
+
+  .hero {
+    display: flex;
+    padding: 0 3em;
+  }
+
+  .hero-header {
+    flex-basis: 55%;
+    padding: 6em 3em;
+    text-align: left;
+    display: block;
+  }
+
+  h1 {
+    font-size: 4em;
+    padding-bottom: 0;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+  p {
+    font-size: 1.7em;
+  }
+
+  .p-card {
+    font-size: 1.8em;
+    margin-top: 0;
+  }
+
+  .image {
+    order: 2;
+    width: 50%;
+  }
+
+  .image-2 {
+    width: 50%;
+  }
+
+  .text {
+    width: 50vw;
+    height: auto;
+    padding: 0 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+
+  section.hero.card {
+    margin: 3em 7em;
+    padding: 1em 5em;
+  }
+
+  .card-cta {
+    width: 55vw;
+    padding: 6em;
+  }
+
+  .card-cta>h2 {
+    font-size: 3em;
+    color: var(--Very-Dark-Cyan);
+  }
+
+  footer {
+    padding: 10em 6em 5em;
+  }
+
+  .logo-footer {
+    width: 20%;
+    height: auto;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-gap: 5em; 
+    grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  }
+
+  .social {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+ 
+  .copy {
+    font-size: 1.2em;
+    text-align: right;
+  }
 }
